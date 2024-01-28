@@ -3,8 +3,11 @@ document.addEventListener('keydown',check_message);
 function check_message(e){ // this function is triggered everytime a key is pressed
     let message = document.getElementById('message').value;
     let button = document.getElementById('send');
-
-    if(message.length >= 5){
+   
+    if(e.code == "Enter"){
+      send_message();
+    }
+    else if(message.length >= 5){
       button.style.opacity = 0.85;
     }
     else{
