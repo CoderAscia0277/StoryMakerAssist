@@ -60,7 +60,6 @@ p{
     gap:0.5rem;
 }
 .chat_container{
-    background:rgba(255,255,255,0.1);
     display:flex;
     justify-content:start;
     flex-direction:column;
@@ -234,6 +233,7 @@ p{
         width:500px;
         border-radius:20px;
         border: solid 1px white;
+        background:rgba(255,255,255,0.1);
     }
 
 }
@@ -253,7 +253,6 @@ p{
     .header h2{
         font-size: x-large;
         font-family:Arial, Helvetica, sans-serif;
-        font:cursive;
     }
     .text_area{
         width:100vw;
@@ -261,7 +260,7 @@ p{
         align-items: flex-start;
     }
     #message{
-        width: 75vw;
+        width: 90vw;
         height: 20vw;
     }
     .chat_container{
@@ -273,11 +272,11 @@ p{
         height:95vh; 
     }
     #button{
-        width:25vw; 
+        width:10vw; 
         padding-top: 1rem;
     }
     #send{
-        width: 50px;
+        width: max-content;
         height: 50px;
     }
 }
