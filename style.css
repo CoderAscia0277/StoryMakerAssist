@@ -2,12 +2,11 @@
 body {
    background-image:url('purple.jpg');
    background-size:contain; /*makes the bg fit to screen*/
-   overflow:hidden;
-   font: sans;
+   overflow-y:hidden;
    display:flex;
    flex-direction:column;
    gap:0.25rem;
-   justify-content:center;
+   justify-content:start;
    align-items:center;
 }
 p{
@@ -141,6 +140,9 @@ p{
     resize:none;
     font-size:large;
 }
+#message::-webkit-scrollbar{
+    width:0px;
+}
 #button{
     width:max-content;
     height:auto;
@@ -210,7 +212,7 @@ p{
 }
 @media(max-width:2500px){
     .header{
-        width:600px;
+        width:500px;
         height:80px;
     }
     #menu img{
@@ -223,32 +225,60 @@ p{
         font:cursive;
     }
     .text_area{
-        width:600px;
+        width:500px;
     }
     #message{
-        width: 500px;
+        width: 400px;
         height: 65px;
         overflow-y: scroll;
     }
     .chat_container{
-        width:600px;
+        width:500px;
+        background-color: red;
     }
 
 }
 @media(max-width:415px){
+    body{
+        width:100vw;
+        height:100vh;
+    }
     .header{
-        width: 350px;
-        height:50px;
+        width:100vw;
+        height:10vh;
     }
     #menu img{
-        width:50px;
-        height:50px;
+        width:40px;
+        height:40px;
     }
     .header h2{
-        font-size:larger;
+        font-size: x-large;
+        font-family:Arial, Helvetica, sans-serif;
+        font:cursive;
+    }
+    .text_area{
+        width:100vw;
+        height: 200px;
+        align-items: flex-start;
+    }
+    #message{
+        width: 75vw;
+        height: 20vw;
+    }
+    .chat_container{
+        width:100vw;
+        height: 95vh;
     }
     .main{
-        width:350px;
-        height:90vh;  
+        width:390px;
+        height:95vh; 
+    }
+    #button{
+        width:25vw; 
+        padding-top: 1rem;
+    }
+    #send{
+        width: 50px;
+        height: 50px;
     }
 }
